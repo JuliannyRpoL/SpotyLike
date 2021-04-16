@@ -1,0 +1,28 @@
+<div class="m-signin-form">
+  <app-common-input
+    class="a-input-name"
+    (actualValue)="getUserValue($event)"
+    [style]="{
+      width: '220px'
+    }"
+    [placeholder]="'Usuario'"
+  ></app-common-input>
+  <app-icon-input
+    class="a-input-password"
+    (actualValue)="getPasswordValue($event)"
+    [style]="{
+      width: '220px'
+    }"
+    [placeholder]="'Contraseña'"
+  ></app-icon-input>
+  <app-common-button
+    class="a-signin-btn"
+    [variant]="'content'"
+    [label]="'Registrarse'"
+    [style]="{
+      height: '30px',
+      width: '80%'
+    }"
+    (click)="handleSignIn()"
+  ></app-common-button>
+</div>

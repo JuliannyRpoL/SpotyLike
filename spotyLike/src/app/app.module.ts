@@ -20,6 +20,9 @@ import { SongsListComponent } from './components/organisms/songs-list/songs-list
 import { IconInputComponent } from './components/atoms/icon-input/icon-input.component';
 import { SignInButtonComponent } from './components/molecules/sign-in-button/sign-in-button.component';
 import { LogInOrganismComponent } from './components/organisms/log-in-org/log-in-org.component';
+import { SignInFormComponent } from './components/molecules/sign-in-form/sign-in-form.component';
+import { LogInButtonComponent } from './components/molecules/log-in-button/log-in-button.component';
+import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign-in-org.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { LogInOrganismComponent } from './components/organisms/log-in-org/log-in
     SongsListComponent,
     IconInputComponent,
     SignInButtonComponent,
+    SignInFormComponent,
+    SignInOrganismComponent,
+    LogInButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,0 +1,21 @@
+.m-signin-form {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+
+  .a-input-name,
+  .a-input-password,
+  .a-signin-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .a-signin-btn {
+    margin-top: 15px;
+  }
+}
