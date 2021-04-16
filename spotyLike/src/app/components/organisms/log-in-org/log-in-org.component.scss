@@ -1,0 +1,33 @@
+@import "../../../../styles.scss";
+
+.o-log-in {
+  height: 100vh;
+  background-color: $background-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-log-in__form {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .m-logo {
+    margin-bottom: 30px;
+  }
+
+  .m-sign-in {
+    margin-bottom: 25px;
+  }
+
+  .m-other-access {
+    width: 60%;
+
+    @include from($medium) {
+      width: 100%;
+    }
+  }
+}
