@@ -1,0 +1,23 @@
+@import "../../../../styles.scss";
+
+.a-logo-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    width: 60px;
+  }
+
+  &__name {
+    display: none;
+
+    @include from($medium) {
+      display: block;
+      margin-left: 10px;
+      font-size: 26px;
+      color: $font-light;
+      @include montserrat-bold;
+    }
+  }
+}

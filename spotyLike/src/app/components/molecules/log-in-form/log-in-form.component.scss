@@ -1,0 +1,21 @@
+.m-login-form {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+
+  .a-input-name,
+  .a-input-password,
+  .a-login-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .a-login-btn {
+    margin-top: 15px;
+  }
+}
