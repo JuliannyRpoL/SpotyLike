@@ -1,0 +1,37 @@
+@import "../../../../styles.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $font-light;
+  border: none;
+  height: 1.5em;
+  cursor: pointer;
+  box-sizing: unset;
+  outline: none;
+  background-color: transparent;
+
+  &__label {
+    display: none;
+
+    @include from($medium) {
+      display: block;
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    background-color: $hover-white;
+  }
+}
+
+.button--outlined {
+  border: 2px $background-grey-light solid;
+  border-radius: 0.5em;
+}
+
+img {
+  width: 2em;
+  height: 2em;
+}

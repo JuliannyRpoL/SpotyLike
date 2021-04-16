@@ -1,0 +1,11 @@
+<input
+  (change)="updateValue()"
+  [(ngModel)]="value"
+  [ngStyle]="style"
+  class="input"
+  placeholder="{{ placeholder }}"
+  type="{{ type }}"
+/>
+<button class="btn-img" (click)="changeVisibility()">
+  <img src="{{ imgSrc }}" alt="button-image-{{ placeholder }}" />
+</button>
