@@ -24,5 +24,7 @@ export class LogInFormComponent {
 
   handleLogin() {
     console.log(this.user, this._password);
+    localStorage.setItem('user', this.user);
+    window.location.href = '/';
   }
 }
