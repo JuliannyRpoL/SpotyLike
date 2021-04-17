@@ -1,0 +1,20 @@
+@import "../../../../styles.scss";
+
+.o-navigation-bar {
+  background-color: $hover-dark;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+
+  .a-menu-btn {
+    margin-right: 40px;
+  }
+
+  @include from($medium) {
+    justify-content: center;
+
+    .a-menu-btn {
+      display: none;
+    }
+  }
+}

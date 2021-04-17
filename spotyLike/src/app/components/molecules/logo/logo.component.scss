@@ -5,19 +5,44 @@
   justify-content: center;
   align-items: center;
 
-  &__img {
+  &__name {
+    color: $font-light;
+    margin-left: 10px;
+    @include montserrat-bold;
+  }
+}
+
+.a-logo-img-div--large {
+  .a-logo-img-div__img {
     width: 60px;
   }
 
-  &__name {
+  .a-logo-img-div__name {
     display: none;
 
     @include from($medium) {
       display: block;
-      margin-left: 10px;
       font-size: 26px;
-      color: $font-light;
-      @include montserrat-bold;
+    }
+  }
+}
+
+.a-logo-img-div--regular {
+  .a-logo-img-div__img {
+    width: 40px;
+  }
+
+  .a-logo-img-div__name {
+    font-size: 22px;
+  }
+
+  @include from($medium) {
+    .a-logo-img-div__img {
+      width: 40px;
+    }
+
+    .a-logo-img-div__name {
+      font-size: 24px;
     }
   }
 }

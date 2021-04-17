@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
 })
 export class LogInComponent implements OnInit {
-  value: string;
+  code: string = '';
 
-  constructor() {
-    this.value = '';
-  }
+  constructor(
+    private route: ActivatedRoute,
+    public _authService: AuthenticationService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.code = params['code'];
+    });
 
-  showLabel() {
-    console.log(this.value);
-  }
-
-  getValue(event: any) {
-    this.value = event;
+    if (this.code != undefined) {
+      this._authService.logginWithSpotify(this.code);
+    }
   }
 }

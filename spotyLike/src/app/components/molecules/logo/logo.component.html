@@ -1,4 +1,11 @@
-<div class="a-logo-img-div" role="content logo and app name">
+<div
+  class="a-logo-img-div"
+  role="content logo and app name"
+  [ngClass]="{
+    'a-logo-img-div--large': size == 'large',
+    'a-logo-img-div--regular': size == 'regular'
+  }"
+>
   <img
     class="a-logo-img-div__img"
     src="../../../../assets/img/logo-spotylike.png"

@@ -23,6 +23,8 @@ import { LogInOrganismComponent } from './components/organisms/log-in-org/log-in
 import { SignInFormComponent } from './components/molecules/sign-in-form/sign-in-form.component';
 import { LogInButtonComponent } from './components/molecules/log-in-button/log-in-button.component';
 import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign-in-org.component';
+import { ProfileComponent } from './components/molecules/profile/profile.component';
+import { HomeTemplateComponent } from './templates/home-template/home-template.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign
     LogInComponent,
     SignInComponent,
     HomeComponent,
+    HomeTemplateComponent,
     FavoritesComponent,
     CommonButtonComponent,
     IconButtonComponent,
@@ -46,6 +49,7 @@ import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign
     SignInFormComponent,
     SignInOrganismComponent,
     LogInButtonComponent,
+    ProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

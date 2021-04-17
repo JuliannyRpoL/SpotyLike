@@ -31,6 +31,12 @@
   border-radius: 0.5em;
 }
 
+.button--within-label {
+  .button__label {
+    display: none;
+  }
+}
+
 img {
   width: 2em;
   height: 2em;

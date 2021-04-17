@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'm-logo',
@@ -7,4 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoComponent {
   applicattionName: string = 'SpotyLike';
+
+  @Input() size: string = '';
 }

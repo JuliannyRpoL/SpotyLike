@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'm-log-in-form',
@@ -9,7 +10,7 @@ export class LogInFormComponent {
   user: string;
   _password: string;
 
-  constructor() {
+  constructor(public _authService: AuthenticationService) {
     this.user = '';
     this._password = '';
   }
@@ -20,11 +21,5 @@ export class LogInFormComponent {
 
   getPasswordValue(password: string) {
     this._password = password;
-  }
-
-  handleLogin() {
-    console.log(this.user, this._password);
-    localStorage.setItem('user', this.user);
-    window.location.href = '/';
   }
 }

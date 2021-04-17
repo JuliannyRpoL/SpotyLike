@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'm-other-form-access',
@@ -6,5 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./other-form-access.component.scss'],
 })
 export class OtherFormAccessComponent {
-  constructor() {}
+  constructor(public _authService: AuthenticationService) {}
+
+  handleLoginWithSpotify() {
+    this._authService.redirectLogin();
+  }
 }
