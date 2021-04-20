@@ -1,12 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'o-navigation-bar',
   templateUrl: './navigation-bar.component.html',
   styleUrls: ['./navigation-bar.component.scss'],
 })
-export class NavigationBarComponent implements OnInit {
+export class NavigationBarComponent {
+  @Input() openMenu: boolean = false;
+
+  @Output() openMenuEvent: EventEmitter<boolean> = new EventEmitter<boolean>(
+    this.openMenu
+  );
+
   constructor() {}
 
-  ngOnInit(): void {}
+  handleStatusMenuEvent() {
+    this.openMenu = !this.openMenu;
+    this.openMenuEvent.emit(this.openMenu);
+  }
 }

@@ -1,0 +1,20 @@
+<div class="a-song">
+  <div class="a-song__img">
+    <img src="{{ imgSrc }}" alt="imagen de playlist" />
+  </div>
+  <div class="a-song__info">
+    <h5>{{ playlist_name }}</h5>
+    <h6>De {{ user_name }}</h6>
+  </div>
+  <div class="a-song__fav-icon">
+    <a-icon-button
+      [variant]="'without-label'"
+      [imgSrc]="'../../../../assets/img/star-regular-svg.png'"
+      [style]="{
+        'font-size': '8px',
+        width: '5px',
+        'border-radius': '2em'
+      }"
+    ></a-icon-button>
+  </div>
+</div>

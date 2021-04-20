@@ -1,0 +1,47 @@
+@import "../../../../styles.scss";
+
+.m-songs-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  h2 {
+    width: 100%;
+    text-transform: uppercase;
+    color: $font-light;
+    @include montserrat-bold;
+    font-size: large;
+    margin: 0px 0px 15px 10px;
+  }
+
+  &__songs {
+    display: flex;
+    align-content: space-around;
+
+    .a-song {
+      height: 200px;
+      width: 150px;
+      margin: 10px;
+    }
+  }
+
+  &__songs--wrap {
+    flex-wrap: wrap;
+  }
+
+  &__songs--no-wrap {
+    overflow-x: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    background-color: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $scroll-light;
+    border-radius: 5em;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+  }
+}

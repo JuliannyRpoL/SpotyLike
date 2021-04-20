@@ -1,0 +1,44 @@
+<div class="m-nav-items">
+  <div class="m-nav-items__item">
+    <a-icon-button
+      routerLink="/"
+      [label]="'Inicio'"
+      [imgSrc]="'../../../../assets/img/home-solid-svg.png'"
+      [variant]="'always-label'"
+      [style]="{
+        'font-size': '14px',
+        height: '3.5em',
+        width: '90%',
+        'padding-left': '8%'
+      }"
+    ></a-icon-button>
+  </div>
+  <div class="m-nav-items__item">
+    <a-icon-button
+      routerLink="/favoritos"
+      [label]="'Favoritos'"
+      [imgSrc]="'../../../../assets/img/star-regular-svg.png'"
+      [variant]="'always-label'"
+      [style]="{
+        'font-size': '14px',
+        height: '3.5em',
+        width: '90%',
+        'padding-left': '8%'
+      }"
+    ></a-icon-button>
+  </div>
+  <div class="m-nav-items__item">
+    <a-icon-button
+      [label]="'Cerrar sesión'"
+      [imgSrc]="'../../../../assets/img/sign-out-alt-solid-svg.png'"
+      [variant]="'always-label'"
+      [style]="{
+        'font-size': '14px',
+        height: '3.5em',
+        width: '90%',
+        'padding-left': '8%'
+      }"
+      (click)="handleLogout()"
+    ></a-icon-button>
+  </div>
+</div>

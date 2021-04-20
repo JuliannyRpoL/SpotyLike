@@ -1,0 +1,18 @@
+<div class="m-songs-group">
+  <h2>{{ title }}</h2>
+  <div
+    class="m-songs-group__songs"
+    [ngClass]="{
+      'm-songs-group__songs--wrap': variant == 'wrap',
+      'm-songs-group__songs--no-wrap': variant == 'no-wrap'
+    }"
+  >
+    <div class="a-song" *ngFor="let song of songs">
+      <a-song
+        [user_name]="song.user"
+        [playlist_name]="song.name"
+        [imgSrc]="song.img"
+      ></a-song>
+    </div>
+  </div>
+</div>

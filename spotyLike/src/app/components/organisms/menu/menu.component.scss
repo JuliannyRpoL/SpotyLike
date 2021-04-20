@@ -1,0 +1,14 @@
+@import "../../../../styles.scss";
+
+.o-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-grey-dark;
+  height: 100%;
+
+  .m-profile {
+    margin-bottom: 40px;
+    padding: 30px 20px 30px 8%;
+    max-width: 100%;
+  }
+}

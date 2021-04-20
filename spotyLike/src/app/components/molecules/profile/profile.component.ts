@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProfileComponent {
   @Input() imgSrc: string = '';
+  @Input() profile_name: string = '';
 
   constructor() {}
 }

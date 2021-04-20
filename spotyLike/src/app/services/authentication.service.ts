@@ -13,7 +13,8 @@ export class AuthenticationService {
   constructor() {}
 
   redirectLogin() {
-    let scopes = 'user-read-private';
+    let scopes =
+      'user-read-private user-read-email playlist-read-private playlist-read-collaborative';
     window.location.replace(
       'https://accounts.spotify.com/authorize' +
         '?response_type=code' +

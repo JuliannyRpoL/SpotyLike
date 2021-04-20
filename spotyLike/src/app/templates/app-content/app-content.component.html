@@ -1,0 +1,33 @@
+<div class="t-app-content">
+  <div
+    class="o-menu"
+    [ngClass]="{
+      'o-menu--show': openMenu == true
+    }"
+  >
+    <o-menu></o-menu>
+  </div>
+  <div class="t-app-content__content">
+    <div class="o-navigation-bar">
+      <o-navigation-bar
+        [openMenu]="openMenu"
+        (openMenuEvent)="handleShowMenu($event)"
+      ></o-navigation-bar>
+    </div>
+    <div class="o-songs-content">
+      <o-songs-list [user]="user" *ngIf="page == 'home'"></o-songs-list>
+      <o-favorites-songs
+        [user]="user"
+        *ngIf="page == 'favorites'"
+      ></o-favorites-songs>
+    </div>
+  </div>
+  <div
+    class="t-app-content__layer"
+    role="cover content when menu is open"
+    [ngClass]="{
+      't-app-content__layer--show': openMenu == true
+    }"
+    (click)="handleCloseMenu()"
+  ></div>
+</div>

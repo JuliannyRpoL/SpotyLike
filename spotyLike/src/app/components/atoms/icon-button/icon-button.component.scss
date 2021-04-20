@@ -24,6 +24,28 @@
   &:hover {
     background-color: $hover-white;
   }
+
+  img {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.button--always-label {
+  justify-content: flex-start;
+  .button__label {
+    margin-left: 10px;
+    display: block;
+  }
+
+  &:focus {
+    background-color: $primary-green-dark;
+  }
+
+  img {
+    width: 1.5em;
+    height: 1.5em;
+  }
 }
 
 .button--outlined {
@@ -33,11 +55,7 @@
 
 .button--within-label {
   .button__label {
+    margin-left: 0px;
     display: none;
   }
-}
-
-img {
-  width: 2em;
-  height: 2em;
 }

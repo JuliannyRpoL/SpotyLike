@@ -1,4 +1,4 @@
 export const HOME = '';
-export const FAVORITES = 'favorites';
+export const FAVORITES = 'favoritos';
 export const LOGIN = 'login';
-export const SIGNIN = 'signin';
+export const SIGNIN = 'registro';

@@ -24,7 +24,11 @@ import { SignInFormComponent } from './components/molecules/sign-in-form/sign-in
 import { LogInButtonComponent } from './components/molecules/log-in-button/log-in-button.component';
 import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign-in-org.component';
 import { ProfileComponent } from './components/molecules/profile/profile.component';
-import { HomeTemplateComponent } from './templates/home-template/home-template.component';
+import { AppContentComponent } from './templates/app-content/app-content.component';
+import { NavItemsComponent } from './components/molecules/nav-items/nav-items.component';
+import { SongsGroupComponent } from './components/molecules/songs-group/songs-group.component';
+import { SongComponent } from './components/atoms/song/song.component';
+import { FavoritesSongsComponent } from './components/organisms/favorites-songs/favorites-songs.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,7 @@ import { HomeTemplateComponent } from './templates/home-template/home-template.c
     LogInComponent,
     SignInComponent,
     HomeComponent,
-    HomeTemplateComponent,
+    AppContentComponent,
     FavoritesComponent,
     CommonButtonComponent,
     IconButtonComponent,
@@ -50,6 +54,10 @@ import { HomeTemplateComponent } from './templates/home-template/home-template.c
     SignInOrganismComponent,
     LogInButtonComponent,
     ProfileComponent,
+    NavItemsComponent,
+    SongsGroupComponent,
+    SongComponent,
+    FavoritesSongsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
