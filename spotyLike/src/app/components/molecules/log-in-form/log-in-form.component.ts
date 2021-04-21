@@ -23,7 +23,12 @@ export class LogInFormComponent {
     this._password = password;
   }
 
-  handleLogin() {
-    this._authService.logInFirebase(this.user, this._password);
+  async handleLogin() {
+    try {
+      await this._authService.logInFirebase(this.user, this._password);
+      this._authService.redirectLogin();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

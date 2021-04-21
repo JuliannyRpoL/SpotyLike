@@ -27,37 +27,14 @@ export class AuthenticationService {
     );
   }
 
-  signInFirebase(email: string, password: string) {
-    firebase
+  async signInFirebase(email: string, password: string) {
+    return await firebase
       .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        var user = userCredential.user;
-        return user;
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        return error;
-      });
+      .createUserWithEmailAndPassword(email, password);
   }
 
-  logInFirebase(email: string, password: string) {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Signed in
-        var user = userCredential.user;
-        console.log(user);
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(error);
-        return error;
-      });
+  async logInFirebase(email: string, password: string) {
+    return await firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
   async logginWithSpotify(code: string) {
