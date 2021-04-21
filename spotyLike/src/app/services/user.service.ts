@@ -6,15 +6,8 @@ import axios from 'axios';
   providedIn: 'root',
 })
 export class UserService {
-  getUserInformation() {
+  getUserInformation(token: string) {
     const url: string = 'https://api.spotify.com/v1/me';
-    const user_access = localStorage.getItem('user-access');
-
-    let token: string;
-
-    user_access != undefined
-      ? (token = JSON.parse(user_access).access_token)
-      : (token = '');
 
     const config = {
       headers: {
@@ -26,8 +19,8 @@ export class UserService {
     axios
       .get(url, config)
       .then((response) => {
-        console.log(response);
-        return response.data;
+        sessionStorage.setItem('user_data', JSON.stringify(response.data));
+        window.location.href = '/';
       })
       .catch((err) => {
         return err;

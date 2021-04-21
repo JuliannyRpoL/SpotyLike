@@ -13,10 +13,8 @@ export class FavoritesSongsComponent implements AfterContentInit {
 
   constructor(public playlist: PlaylistService) {}
 
-  async getPlaylists() {
-    await this.playlist.getPlaylistUser(this.user).then((res) => {
-      return res;
-    });
+  getPlaylists() {
+    return this.playlist.getPlaylistUser();
   }
 
   ngAfterContentInit(): void {

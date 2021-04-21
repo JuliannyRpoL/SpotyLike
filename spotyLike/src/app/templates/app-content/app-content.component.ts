@@ -9,7 +9,6 @@ export class AppContentComponent implements OnInit {
   openMenu: boolean = false;
   wasClickedMenuBtn: boolean = false;
 
-  @Input() user: any;
   @Input() page: string = 'home';
 
   constructor() {}

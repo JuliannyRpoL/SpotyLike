@@ -14,7 +14,7 @@ export class AuthenticationService {
 
   redirectLogin() {
     let scopes =
-      'user-read-private user-read-email playlist-read-private playlist-read-collaborative';
+      'user-read-private user-read-email playlist-read-private playlist-read-collaborative user-top-read';
     window.location.replace(
       'https://accounts.spotify.com/authorize' +
         '?response_type=code' +
@@ -22,12 +22,11 @@ export class AuthenticationService {
         CLIENT_ID +
         (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
         '&redirect_uri=' +
-        encodeURIComponent(REDIRECT_URI) +
-        '&code=1234567890'
+        encodeURIComponent(REDIRECT_URI)
     );
   }
 
-  logginWithSpotify(code: string) {
+  async logginWithSpotify(code: string) {
     const url = 'https://accounts.spotify.com/api/token';
 
     const params = new URLSearchParams();
@@ -43,19 +42,11 @@ export class AuthenticationService {
       },
     };
 
-    axios
-      .post(url, params, config)
-      .then((result) => {
-        localStorage.setItem('user-access', JSON.stringify(result.data));
-        window.location.href = '/';
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    return (await axios.post(url, params, config)).data;
   }
 
   isLoggedIn(): boolean {
-    let user = localStorage.getItem('user-access');
+    let user = sessionStorage.getItem('user_access');
     let isLoggedUser: boolean;
 
     user !== null ? (isLoggedUser = true) : (isLoggedUser = false);

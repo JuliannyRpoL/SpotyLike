@@ -4,9 +4,9 @@
   </div>
   <div class="a-song__info">
     <h5>{{ playlist_name }}</h5>
-    <h6>De {{ user_name }}</h6>
+    <h6 *ngIf="user_name">De {{ user_name }}</h6>
   </div>
-  <div class="a-song__fav-icon">
+  <div class="a-song__fav-icon" *ngIf="canBeSelect === true">
     <a-icon-button
       [variant]="'without-label'"
       [imgSrc]="'../../../../assets/img/star-regular-svg.png'"

@@ -9,6 +9,7 @@ export class SongComponent {
   @Input() user_name: string = '';
   @Input() playlist_name: string = '';
   @Input() imgSrc: string = '';
+  @Input() canBeSelect: boolean = false;
 
   constructor() {}
 }

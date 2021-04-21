@@ -1,5 +1,10 @@
 <div class="m-nav-items">
-  <div class="m-nav-items__item">
+  <div
+    class="m-nav-items__item"
+    [ngClass]="{
+      'm-nav-items__item--selected': activeRoute == '/'
+    }"
+  >
     <a-icon-button
       routerLink="/"
       [label]="'Inicio'"
@@ -7,13 +12,18 @@
       [variant]="'always-label'"
       [style]="{
         'font-size': '14px',
-        height: '3.5em',
+        height: '2.7em',
         width: '90%',
         'padding-left': '8%'
       }"
     ></a-icon-button>
   </div>
-  <div class="m-nav-items__item">
+  <div
+    class="m-nav-items__item"
+    [ngClass]="{
+      'm-nav-items__item--selected': activeRoute == '/favoritos'
+    }"
+  >
     <a-icon-button
       routerLink="/favoritos"
       [label]="'Favoritos'"
@@ -21,7 +31,7 @@
       [variant]="'always-label'"
       [style]="{
         'font-size': '14px',
-        height: '3.5em',
+        height: '2.7em',
         width: '90%',
         'padding-left': '8%'
       }"
@@ -34,7 +44,7 @@
       [variant]="'always-label'"
       [style]="{
         'font-size': '14px',
-        height: '3.5em',
+        height: '2.7em',
         width: '90%',
         'padding-left': '8%'
       }"
