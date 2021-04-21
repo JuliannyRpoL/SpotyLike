@@ -13,8 +13,14 @@
         [user_name]="song.owner.display_name"
         [playlist_name]="song.name"
         [imgSrc]="song.images[0].url"
-        [canBeSelect]="true"
-        [playlist_id]="song.id"
+      ></a-song>
+      <a-song
+        *ngIf="song.track"
+        [user_name]="song.track.artists[0].name"
+        [playlist_name]="song.track.name"
+        [imgSrc]="song.track.album.images[0].url"
+        [playlist_id]="song.track.id"
+        [songType]="favoriteSong"
       ></a-song>
       <a-song
         *ngIf="song.followers"
@@ -25,7 +31,9 @@
         *ngIf="song.artists"
         [user_name]="song.artists[0].name"
         [playlist_name]="song.name"
+        [playlist_id]="song.id"
         [imgSrc]="song.album.images[0].url"
+        [songType]="favoriteSong"
       ></a-song>
     </div>
   </div>

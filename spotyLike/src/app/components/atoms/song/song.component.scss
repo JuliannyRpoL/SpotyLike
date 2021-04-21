@@ -36,7 +36,7 @@
     h5,
     h6 {
       display: block;
-      max-width: 120px;
+      max-width: 90px;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -49,7 +49,7 @@
     }
   }
 
-  &__fav-icon {
+  &__icon {
     margin-right: 8px;
     align-self: center;
   }

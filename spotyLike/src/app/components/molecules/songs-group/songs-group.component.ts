@@ -15,6 +15,7 @@ export class SongsGroupComponent {
   @Input() title: string = '';
   @Input() variant: string = '';
   @Input() songs: any = '';
+  @Input() favoriteSong: any = '';
 
   constructor() {}
 }

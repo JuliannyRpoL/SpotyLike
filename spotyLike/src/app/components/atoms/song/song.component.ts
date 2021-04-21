@@ -11,12 +11,16 @@ export class SongComponent {
   @Input() playlist_name: string = '';
   @Input() imgSrc: string = '';
   @Input() playlist_id: string = '';
-  @Input() canBeSelect: boolean = false;
+  @Input() songType: string = '';
 
   constructor(public _playlistService: PlaylistService) {}
 
-  async handleUnfollowPlaylist(playlist_id: string) {
-    await this._playlistService.unfollowPlaylist(playlist_id);
+  async handleRemoveTrack(track_id: string) {
+    await this._playlistService.removeTrack(track_id);
     window.location.reload();
+  }
+
+  async handleAddTrack(track_id: string) {
+    await this._playlistService.saveNewTrack(track_id);
   }
 }

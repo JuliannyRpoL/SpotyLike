@@ -54,7 +54,7 @@ export class PlaylistService {
     return (await axios.get(url, config)).data.items;
   }
 
-  async unfollowPlaylist(playlist_id: string) {
+  async saveNewTrack(track_id: string) {
     const user_access = sessionStorage.getItem('user_access');
 
     let token: string;
@@ -63,7 +63,49 @@ export class PlaylistService {
       ? (token = JSON.parse(user_access).access_token)
       : (token = '');
 
-    const url = `https://api.spotify.com/v1/playlists/${playlist_id}/followers`;
+    const url = `https://api.spotify.com/v1/me/tracks?ids=${track_id}`;
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+    };
+
+    return (await axios({ method: 'put', url, headers: config.headers })).data;
+  }
+
+  async getTracksUser() {
+    const user_access = sessionStorage.getItem('user_access');
+
+    let token: string;
+
+    user_access != undefined
+      ? (token = JSON.parse(user_access).access_token)
+      : (token = '');
+
+    const url = `https://api.spotify.com/v1/me/tracks`;
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+    };
+
+    return (await axios.get(url, config)).data.items;
+  }
+
+  async removeTrack(track_id: string) {
+    const user_access = sessionStorage.getItem('user_access');
+
+    let token: string;
+
+    user_access != undefined
+      ? (token = JSON.parse(user_access).access_token)
+      : (token = '');
+
+    const url = `https://api.spotify.com/v1/me/tracks?ids=${track_id}`;
 
     const config = {
       headers: {

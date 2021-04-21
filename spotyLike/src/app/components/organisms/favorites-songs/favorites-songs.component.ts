@@ -14,7 +14,7 @@ export class FavoritesSongsComponent implements OnInit {
   constructor(public playlist: PlaylistService) {}
 
   async getFavoritesSongs() {
-    this.favorites_songs = await this.playlist.getPlaylistUser();
+    this.favorites_songs = await this.playlist.getTracksUser();
   }
 
   ngOnInit(): void {

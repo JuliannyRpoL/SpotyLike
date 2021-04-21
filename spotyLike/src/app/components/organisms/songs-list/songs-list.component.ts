@@ -7,15 +7,16 @@ import { PlaylistService } from 'src/app/services/playlist.service';
   styleUrls: ['./songs-list.component.scss'],
 })
 export class SongsListComponent implements OnInit {
+  playlist: any;
   artists: any;
   tracks: any;
 
-  constructor(public playlist: PlaylistService) {}
+  constructor(public _playlistService: PlaylistService) {}
 
   async getPlaylists() {
-    //this.artists = await this.playlist.getPlaylistUser();
-    this.artists = await this.playlist.getRecomendationsUser('artists');
-    this.tracks = await this.playlist.getRecomendationsUser('tracks');
+    this.playlist = await this._playlistService.getPlaylistUser();
+    this.artists = await this._playlistService.getRecomendationsUser('artists');
+    this.tracks = await this._playlistService.getRecomendationsUser('tracks');
   }
 
   async getSonsUser() {}

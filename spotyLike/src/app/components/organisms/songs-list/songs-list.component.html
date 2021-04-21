@@ -1,16 +1,24 @@
 <div class="o-songs-list">
-  <div class="o-songs-list-songs-group" role="group popular songs">
+  <div class="o-songs-list-songs-group" role="group playlists">
+    <m-songs-group
+      [title]="'Tus playlists'"
+      [songs]="playlist"
+      [variant]="'no-wrap'"
+    ></m-songs-group>
+  </div>
+  <div class="o-songs-list-songs-group" role="group recomended artists">
     <m-songs-group
       [title]="'Artistas Recomendados'"
       [songs]="artists"
       [variant]="'no-wrap'"
     ></m-songs-group>
   </div>
-  <div class="o-songs-list-songs-group" role="group other songs">
+  <div class="o-songs-list-songs-group" role="group recomended songs">
     <m-songs-group
       [title]="'Canciones para ti'"
       [songs]="tracks"
       [variant]="'wrap'"
+      [favoriteSong]="'recomended'"
     ></m-songs-group>
   </div>
 </div>
