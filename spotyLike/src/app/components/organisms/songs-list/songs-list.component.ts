@@ -14,8 +14,8 @@ export class SongsListComponent implements OnInit {
 
   async getPlaylists() {
     //this.artists = await this.playlist.getPlaylistUser();
-    this.artists = await this.playlist.getSongsUser('artists');
-    this.tracks = await this.playlist.getSongsUser('tracks');
+    this.artists = await this.playlist.getRecomendationsUser('artists');
+    this.tracks = await this.playlist.getRecomendationsUser('tracks');
   }
 
   async getSonsUser() {}

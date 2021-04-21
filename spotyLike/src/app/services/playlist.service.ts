@@ -33,7 +33,7 @@ export class PlaylistService {
     return (await axios.get(url, config)).data.items;
   }
 
-  async getSongsUser(type: string) {
+  async getRecomendationsUser(type: string) {
     const user_access = sessionStorage.getItem('user_access');
 
     let token: string;
@@ -52,5 +52,26 @@ export class PlaylistService {
     };
 
     return (await axios.get(url, config)).data.items;
+  }
+
+  async unfollowPlaylist(playlist_id: string) {
+    const user_access = sessionStorage.getItem('user_access');
+
+    let token: string;
+
+    user_access != undefined
+      ? (token = JSON.parse(user_access).access_token)
+      : (token = '');
+
+    const url = `https://api.spotify.com/v1/playlists/${playlist_id}/followers`;
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+    };
+
+    return (await axios.delete(url, config)).data;
   }
 }

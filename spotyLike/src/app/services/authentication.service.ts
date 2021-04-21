@@ -14,7 +14,7 @@ export class AuthenticationService {
 
   redirectLogin() {
     let scopes =
-      'user-read-private user-read-email playlist-read-private playlist-read-collaborative user-top-read';
+      'user-read-private user-read-email playlist-read-private playlist-read-collaborative user-top-read playlist-modify-public playlist-modify-private';
     window.location.replace(
       'https://accounts.spotify.com/authorize' +
         '?response_type=code' +
