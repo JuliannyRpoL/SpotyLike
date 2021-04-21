@@ -11,6 +11,11 @@
   font-weight: bold;
 }
 
+@mixin montserrat-light() {
+  font-family: "montserrat";
+  font-weight: lighter;
+}
+
 @mixin montserrat-regular() {
   font-family: "montserrat";
   font-weight: normal;

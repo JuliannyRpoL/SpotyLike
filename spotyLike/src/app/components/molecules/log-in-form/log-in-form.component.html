@@ -1,20 +1,27 @@
-<div class="m-login-form">
-  <app-common-input
-    class="m-login-form-input-name"
-    (actualValue)="getUserValue($event)"
-    [style]="{
-      width: '220px'
-    }"
-    [placeholder]="'Usuario'"
-  ></app-common-input>
-  <app-icon-input
-    class="m-login-form-input-password"
-    (actualValue)="getPasswordValue($event)"
-    [style]="{
-      width: '220px'
-    }"
-    [placeholder]="'Contraseña'"
-  ></app-icon-input>
+<form class="m-login-form">
+  <div class="m-login-form-input">
+    <app-common-input
+      class="m-login-form-input-name"
+      (actualValue)="getUserValue($event)"
+      [style]="{
+        width: '220px'
+      }"
+      [placeholder]="'Usuario'"
+      [type]="'email'"
+    ></app-common-input>
+    <p *ngIf="emailError">{{ emailError }}</p>
+  </div>
+  <div class="m-login-form-input">
+    <app-icon-input
+      class="m-login-form-input-password"
+      (actualValue)="getPasswordValue($event)"
+      [style]="{
+        width: '220px'
+      }"
+      [placeholder]="'Contraseña'"
+    ></app-icon-input>
+    <p *ngIf="passwordError">{{ passwordError }}</p>
+  </div>
   <app-common-button
     class="m-login-form-login-btn"
     [variant]="'content'"
@@ -25,4 +32,4 @@
     }"
     (click)="handleLogin()"
   ></app-common-button>
-</div>
+</form>

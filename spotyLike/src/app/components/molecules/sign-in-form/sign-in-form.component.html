@@ -1,6 +1,6 @@
-<div class="m-signin-form">
+<form class="m-signin-form">
   <app-common-input
-    class="m-input-name"
+    class="m-signin-form-input-name"
     (actualValue)="getUserValue($event)"
     [style]="{
       width: '220px'
@@ -8,7 +8,7 @@
     [placeholder]="'Usuario'"
   ></app-common-input>
   <app-icon-input
-    class="m-input-password"
+    class="m-signin-form-input-password"
     (actualValue)="getPasswordValue($event)"
     [style]="{
       width: '220px'
@@ -16,7 +16,7 @@
     [placeholder]="'Contraseña'"
   ></app-icon-input>
   <app-common-button
-    class="m-signin-btn"
+    class="m-signin-form-btn"
     [variant]="'content'"
     [label]="'Registrarse'"
     [style]="{
@@ -25,4 +25,4 @@
     }"
     (click)="handleSignIn()"
   ></app-common-button>
-</div>
+</form>

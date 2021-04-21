@@ -11,6 +11,7 @@ export class CommonInputComponent {
   @Input() placeholder: string = '';
   @Input() type: string = '';
   @Input() style: any = '';
+  @Input() required: boolean = false;
 
   @Output() actualValue: EventEmitter<string> = new EventEmitter<string>();
 

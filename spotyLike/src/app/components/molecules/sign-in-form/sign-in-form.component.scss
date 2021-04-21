@@ -6,16 +6,16 @@
   align-items: center;
   height: 200px;
 
-  .m-input-name,
-  .m-input-password,
-  .m-signin-btn {
+  &-input-name,
+  &-input-password,
+  &-btn {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .m-signin-btn {
+  &-btn {
     margin-top: 15px;
   }
 }
