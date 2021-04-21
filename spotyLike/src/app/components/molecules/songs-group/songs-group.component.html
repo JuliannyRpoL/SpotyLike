@@ -7,7 +7,7 @@
       'm-songs-group__songs--no-wrap': variant == 'no-wrap'
     }"
   >
-    <div class="a-song" *ngFor="let song of songs">
+    <div class="m-song" *ngFor="let song of songs">
       <a-song
         *ngIf="song.owner"
         [user_name]="song.owner.display_name"

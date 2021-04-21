@@ -1,6 +1,6 @@
 <div class="m-login-form">
   <app-common-input
-    class="a-input-name"
+    class="m-login-form-input-name"
     (actualValue)="getUserValue($event)"
     [style]="{
       width: '220px'
@@ -8,7 +8,7 @@
     [placeholder]="'Usuario'"
   ></app-common-input>
   <app-icon-input
-    class="a-input-password"
+    class="m-login-form-input-password"
     (actualValue)="getPasswordValue($event)"
     [style]="{
       width: '220px'
@@ -16,12 +16,13 @@
     [placeholder]="'Contraseña'"
   ></app-icon-input>
   <app-common-button
-    class="a-login-btn"
+    class="m-login-form-login-btn"
     [variant]="'content'"
     [label]="'Iniciar sesión'"
     [style]="{
       height: '30px',
       width: '80%'
     }"
+    (click)="handleLogin()"
   ></app-common-button>
 </div>

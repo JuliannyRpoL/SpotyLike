@@ -22,4 +22,8 @@ export class LogInFormComponent {
   getPasswordValue(password: string) {
     this._password = password;
   }
+
+  handleLogin() {
+    this._authService.logInFirebase(this.user, this._password);
+  }
 }

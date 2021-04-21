@@ -1,6 +1,6 @@
 @import "../../../../styles.scss";
 
-.a-logo-img-div {
+.m-logo-img-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +12,12 @@
   }
 }
 
-.a-logo-img-div--large {
-  .a-logo-img-div__img {
+.m-logo-img-div--large {
+  .m-logo-img-div__img {
     width: 60px;
   }
 
-  .a-logo-img-div__name {
+  .m-logo-img-div__name {
     display: none;
 
     @include from($medium) {
@@ -27,21 +27,21 @@
   }
 }
 
-.a-logo-img-div--regular {
-  .a-logo-img-div__img {
+.m-logo-img-div--regular {
+  .m-logo-img-div__img {
     width: 40px;
   }
 
-  .a-logo-img-div__name {
+  .m-logo-img-div__name {
     font-size: 22px;
   }
 
   @include from($medium) {
-    .a-logo-img-div__img {
+    .m-logo-img-div__img {
       width: 40px;
     }
 
-    .a-logo-img-div__name {
+    .m-logo-img-div__name {
       font-size: 24px;
     }
   }

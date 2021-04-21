@@ -5,6 +5,7 @@ import {
   CLIENT_SECRET,
 } from '../../config/credentials';
 import axios from 'axios';
+import firebase from '../../config/firebase';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +25,39 @@ export class AuthenticationService {
         '&redirect_uri=' +
         encodeURIComponent(REDIRECT_URI)
     );
+  }
+
+  signInFirebase(email: string, password: string) {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        var user = userCredential.user;
+        return user;
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        return error;
+      });
+  }
+
+  logInFirebase(email: string, password: string) {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(error);
+        return error;
+      });
   }
 
   async logginWithSpotify(code: string) {

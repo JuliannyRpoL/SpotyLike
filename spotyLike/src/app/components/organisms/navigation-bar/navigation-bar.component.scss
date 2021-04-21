@@ -7,14 +7,14 @@
   align-items: center;
   padding-left: 15px;
 
-  .a-menu-btn {
+  &-menu-btn {
     margin-right: 40px;
   }
 
   @include from($large) {
     justify-content: center;
 
-    .a-menu-btn {
+    &-menu-btn {
       display: none;
     }
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LOGIN } from 'src/app/router/routes';
 
 @Component({
   selector: 'm-log-in-button',
@@ -9,6 +10,6 @@ export class LogInButtonComponent {
   constructor() {}
 
   redirectToLogIn() {
-    window.location.href = '/login';
+    window.location.href = LOGIN;
   }
 }

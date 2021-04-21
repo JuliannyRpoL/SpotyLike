@@ -17,5 +17,6 @@ export class SongComponent {
 
   async handleUnfollowPlaylist(playlist_id: string) {
     await this._playlistService.unfollowPlaylist(playlist_id);
+    window.location.reload();
   }
 }

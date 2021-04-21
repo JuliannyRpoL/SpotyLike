@@ -6,16 +6,16 @@
   align-items: center;
   height: 200px;
 
-  .a-input-name,
-  .a-input-password,
-  .a-login-btn {
+  &-input-name,
+  &-input-password,
+  &-login-btn {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .a-login-btn {
+  &-login-btn {
     margin-top: 15px;
   }
 }

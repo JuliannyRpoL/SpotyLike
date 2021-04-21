@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'm-sign-in-form',
@@ -9,7 +10,7 @@ export class SignInFormComponent {
   user: string;
   _password: string;
 
-  constructor() {
+  constructor(public _authenticationService: AuthenticationService) {
     this.user = '';
     this._password = '';
   }
@@ -23,6 +24,6 @@ export class SignInFormComponent {
   }
 
   handleSignIn() {
-    console.log(this.user, this._password);
+    this._authenticationService.signInFirebase(this.user, this._password);
   }
 }

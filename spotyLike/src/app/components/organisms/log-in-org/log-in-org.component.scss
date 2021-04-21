@@ -15,15 +15,15 @@
   justify-content: center;
   align-items: center;
 
-  .m-logo {
+  &-logo {
     margin-bottom: 30px;
   }
 
-  .m-sign-in {
+  &-sign-in {
     margin-bottom: 25px;
   }
 
-  .m-other-access {
+  &-other-access {
     width: 60%;
 
     @include from($medium) {
