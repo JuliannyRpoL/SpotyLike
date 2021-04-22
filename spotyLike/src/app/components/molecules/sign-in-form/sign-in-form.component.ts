@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { isValidEmail, isValidPassword } from 'src/utils/validationForm';
 
 @Component({
   selector: 'm-sign-in-form',
@@ -8,11 +9,15 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class SignInFormComponent {
   user: string;
-  _password: string;
+  password: string;
+  emailError: string;
+  passwordError: string;
 
   constructor(public _authenticationService: AuthenticationService) {
     this.user = '';
-    this._password = '';
+    this.password = '';
+    this.emailError = '';
+    this.passwordError = '';
   }
 
   getUserValue(user: string) {
@@ -20,18 +25,34 @@ export class SignInFormComponent {
   }
 
   getPasswordValue(password: string) {
-    this._password = password;
+    this.password = password;
   }
 
   async handleSignIn() {
-    try {
-      await this._authenticationService.signInFirebase(
-        this.user,
-        this._password
-      );
-      this._authenticationService.redirectLogin();
-    } catch (error) {
-      console.log(error);
+    const isAValidEmail = isValidEmail(this.user);
+    const isAValidPassword = isValidPassword(this.password);
+
+    this.emailError = '';
+    this.passwordError = '';
+
+    if (isAValidEmail && isAValidPassword) {
+      try {
+        console.log('hol');
+        await this._authenticationService.signInFirebase(
+          this.user,
+          this.password
+        );
+        this._authenticationService.redirectLogin();
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      if (!isAValidPassword) {
+        this.passwordError = 'Ingrese una contraseña válida';
+      }
+      if (!isAValidEmail) {
+        this.emailError = 'Ingrese un email válido';
+      }
     }
   }
 }
