@@ -31,10 +31,10 @@ export class LogInFormComponent {
   async handleLogin() {
     const isAValidEmail = isValidEmail(this.user);
 
-    if (isAValidEmail && this._password) {
-      this.emailError = '';
-      this.passwordError = '';
+    this.emailError = '';
+    this.passwordError = '';
 
+    if (isAValidEmail && this._password) {
       try {
         await this._authService.logInFirebase(this.user, this._password);
         this._authService.redirectLogin();
@@ -44,18 +44,16 @@ export class LogInFormComponent {
           error.code === 'auth/user-not-found'
         ) {
           this.passwordError = 'Credenciales incorrectas';
+        } else {
+          console.log(error);
         }
       }
     } else {
       if (!this._password) {
         this.passwordError = 'Ingrese una contraseña';
-      } else {
-        this.passwordError = '';
       }
       if (!isAValidEmail) {
         this.emailError = 'Ingrese un email válido';
-      } else {
-        this.emailError = '';
       }
     }
   }

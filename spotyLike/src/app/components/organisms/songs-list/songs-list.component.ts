@@ -14,9 +14,15 @@ export class SongsListComponent implements OnInit {
   constructor(public _playlistService: PlaylistService) {}
 
   async getPlaylists() {
-    this.playlist = await this._playlistService.getPlaylistUser();
-    this.artists = await this._playlistService.getRecomendationsUser('artists');
-    this.tracks = await this._playlistService.getRecomendationsUser('tracks');
+    try {
+      this.playlist = await this._playlistService.getPlaylistUser();
+      this.artists = await this._playlistService.getRecomendationsUser(
+        'artists'
+      );
+      this.tracks = await this._playlistService.getRecomendationsUser('tracks');
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async getSonsUser() {}

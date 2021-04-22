@@ -22,7 +22,9 @@ export class LogInComponent implements OnInit {
       sessionStorage.setItem('user_access', JSON.stringify(user_access));
       const token = user_access.access_token;
       this._userService.getUserInformation(token);
-    } catch {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   ngOnInit(): void {

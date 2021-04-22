@@ -16,11 +16,19 @@ export class SongComponent {
   constructor(public _playlistService: PlaylistService) {}
 
   async handleRemoveTrack(track_id: string) {
-    await this._playlistService.removeTrack(track_id);
-    window.location.reload();
+    try {
+      await this._playlistService.removeTrack(track_id);
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async handleAddTrack(track_id: string) {
-    await this._playlistService.saveNewTrack(track_id);
+    try {
+      await this._playlistService.saveNewTrack(track_id);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

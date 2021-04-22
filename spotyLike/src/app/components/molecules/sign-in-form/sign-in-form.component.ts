@@ -37,7 +37,6 @@ export class SignInFormComponent {
 
     if (isAValidEmail && isAValidPassword) {
       try {
-        console.log('hol');
         await this._authenticationService.signInFirebase(
           this.user,
           this.password
