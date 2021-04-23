@@ -43,7 +43,9 @@ export class SignInFormComponent {
         );
         this._authenticationService.redirectLogin();
       } catch (error) {
-        console.log(error);
+        if (error.code === 'auth/email-already-in-use') {
+          this.passwordError = 'Este email ya está en uso';
+        }
       }
     } else {
       if (!isAValidPassword) {
