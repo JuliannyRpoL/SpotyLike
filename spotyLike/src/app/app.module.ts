@@ -30,7 +30,7 @@ import { SongsGroupComponent } from './components/molecules/songs-group/songs-gr
 import { SongComponent } from './components/atoms/song/song.component';
 import { FavoritesSongsComponent } from './components/organisms/favorites-songs/favorites-songs.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { PageNotFoundOrgComponent } from './organisms/page-not-found-org/page-not-found-org.component';
+import { PageNotFoundOrgComponent } from './components/organisms/page-not-found-org/page-not-found-org.component';
 
 @NgModule({
   declarations: [
