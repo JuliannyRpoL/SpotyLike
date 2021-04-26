@@ -1,0 +1,11 @@
+<button
+  class="button"
+  [ngClass]="{
+    'button--content': variant == 'content',
+    'button--outlined': variant == 'outlined',
+    'button--none': variant == 'none'
+  }"
+  [ngStyle]="style"
+>
+  {{ label }}
+</button>

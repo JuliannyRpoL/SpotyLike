@@ -1,0 +1,11 @@
+@import "../../../../styles.scss";
+
+.m-nav-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__item--selected {
+    background-color: $primary-green;
+  }
+}

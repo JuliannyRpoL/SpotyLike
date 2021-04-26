@@ -1,0 +1,34 @@
+<form class="m-signin-form">
+  <div class="m-signin-form-input">
+    <app-common-input
+      class="m-signin-form-input-name"
+      (actualValue)="getUserValue($event)"
+      [style]="{
+        width: '220px'
+      }"
+      [placeholder]="'Usuario'"
+    ></app-common-input>
+    <p *ngIf="emailError">{{ emailError }}</p>
+  </div>
+  <div class="m-signin-form-input">
+    <app-icon-input
+      class="m-signin-form-input-password"
+      (actualValue)="getPasswordValue($event)"
+      [style]="{
+        width: '220px'
+      }"
+      [placeholder]="'Contraseña'"
+    ></app-icon-input>
+    <p *ngIf="passwordError">{{ passwordError }}</p>
+  </div>
+  <app-common-button
+    class="m-signin-form-btn"
+    [variant]="'content'"
+    [label]="'Registrarse'"
+    [style]="{
+      height: '30px',
+      width: '80%'
+    }"
+    (click)="handleSignIn()"
+  ></app-common-button>
+</form>

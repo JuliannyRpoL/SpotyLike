@@ -1,0 +1,18 @@
+@import "../../../../styles.scss";
+
+.input {
+  padding: 0px 8px 0px 8px;
+  height: 2em;
+  border-color: transparent;
+  background-color: $background-grey-light;
+  border-radius: 0.7em;
+  color: $font-light;
+  outline: none;
+
+  @include montserrat-regular;
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px $background-grey-light,
+      0px 0px 8px 1px $secondary-green;
+  }
+}

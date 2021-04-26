@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap'");
+@import "./styles/colors.scss";
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+
+body {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include montserrat-regular;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  @include montserrat-regular;
+  font-size: 80%;
+  line-height: 1.15;
+  margin: 0;
+}

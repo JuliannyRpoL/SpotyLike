@@ -1,0 +1,21 @@
+@import "../../../../styles.scss";
+
+.o-navigation-bar {
+  height: 100%;
+  background-color: $hover-dark;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+
+  &-menu-btn {
+    margin-right: 40px;
+  }
+
+  @include from($large) {
+    justify-content: center;
+
+    &-menu-btn {
+      display: none;
+    }
+  }
+}

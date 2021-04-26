@@ -1,0 +1,11 @@
+.o-favorites-songs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 20px;
+
+  &__songs-group {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

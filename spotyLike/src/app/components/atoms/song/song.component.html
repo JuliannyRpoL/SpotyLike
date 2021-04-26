@@ -1,0 +1,33 @@
+<div class="a-song">
+  <div class="a-song__img">
+    <img src="{{ imgSrc }}" alt="imagen de playlist" />
+  </div>
+  <div class="a-song__info">
+    <h5>{{ playlist_name }}</h5>
+    <h6 *ngIf="user_name">De {{ user_name }}</h6>
+  </div>
+  <div class="a-song__icon">
+    <a-icon-button
+      *ngIf="songType === 'favorite'"
+      [variant]="'without-label'"
+      [imgSrc]="'../../../../assets/img/trash-alt-solid-svg.png'"
+      [style]="{
+        'font-size': '8px',
+        width: '5px',
+        'border-radius': '2em'
+      }"
+      (click)="handleRemoveTrack(playlist_id)"
+    ></a-icon-button>
+    <a-icon-button
+      *ngIf="songType === 'recomended'"
+      [variant]="'without-label'"
+      [imgSrc]="'../../../../assets/img/star-regular-svg.png'"
+      [style]="{
+        'font-size': '8px',
+        width: '5px',
+        'border-radius': '2em'
+      }"
+      (click)="handleAddTrack(playlist_id)"
+    ></a-icon-button>
+  </div>
+</div>

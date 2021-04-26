@@ -1,0 +1,27 @@
+/* Screen */
+@mixin from($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+/* Fonts */
+@mixin montserrat-bold() {
+  font-family: "montserrat";
+  font-weight: bold;
+}
+
+@mixin montserrat-light() {
+  font-family: "montserrat";
+  font-weight: lighter;
+}
+
+@mixin montserrat-regular() {
+  font-family: "montserrat";
+  font-weight: normal;
+}
+
+@mixin montserrat-semi-bold() {
+  font-family: "montserrat";
+  font-weight: 600;
+}

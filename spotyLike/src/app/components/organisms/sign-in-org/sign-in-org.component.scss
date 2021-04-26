@@ -1,0 +1,25 @@
+@import "../../../../styles.scss";
+
+.o-sign-in {
+  height: 100vh;
+  background-color: $background-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-sign-in__form {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-logo {
+    margin-bottom: 30px;
+  }
+
+  &-log-in {
+    margin-bottom: 25px;
+  }
+}

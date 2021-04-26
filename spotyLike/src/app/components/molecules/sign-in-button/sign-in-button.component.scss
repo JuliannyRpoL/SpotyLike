@@ -1,0 +1,12 @@
+@import "../../../../styles.scss";
+
+.m-sign-in-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    font-size: small;
+    color: $font-light;
+  }
+}

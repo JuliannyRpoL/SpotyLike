@@ -1,0 +1,40 @@
+<div class="m-songs-group">
+  <h2>{{ title }}</h2>
+  <div
+    class="m-songs-group__songs"
+    [ngClass]="{
+      'm-songs-group__songs--wrap': variant == 'wrap',
+      'm-songs-group__songs--no-wrap': variant == 'no-wrap'
+    }"
+  >
+    <div class="m-song" *ngFor="let song of songs">
+      <a-song
+        *ngIf="song.owner"
+        [user_name]="song.owner.display_name"
+        [playlist_name]="song.name"
+        [imgSrc]="song.images[0].url"
+      ></a-song>
+      <a-song
+        *ngIf="song.track"
+        [user_name]="song.track.artists[0].name"
+        [playlist_name]="song.track.name"
+        [imgSrc]="song.track.album.images[0].url"
+        [playlist_id]="song.track.id"
+        [songType]="favoriteSong"
+      ></a-song>
+      <a-song
+        *ngIf="song.followers"
+        [playlist_name]="song.name"
+        [imgSrc]="song.images[0].url"
+      ></a-song>
+      <a-song
+        *ngIf="song.artists"
+        [user_name]="song.artists[0].name"
+        [playlist_name]="song.name"
+        [playlist_id]="song.id"
+        [imgSrc]="song.album.images[0].url"
+        [songType]="favoriteSong"
+      ></a-song>
+    </div>
+  </div>
+</div>

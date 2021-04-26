@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+.m-signin-form {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 50px;
+    width: 100%;
+  }
+
+  &-input-name,
+  &-input-password,
+  &-btn {
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-btn {
+    margin-top: 15px;
+  }
+
+  p {
+    width: 100%;
+    font-size: 10px;
+    margin: 0px;
+    color: $error;
+    @include montserrat-light;
+  }
+}

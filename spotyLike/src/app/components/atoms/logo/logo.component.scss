@@ -1,0 +1,48 @@
+@import "../../../../styles.scss";
+
+.a-logo-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    color: $font-light;
+    margin-left: 10px;
+    @include montserrat-bold;
+  }
+}
+
+.a-logo-img-div--large {
+  .a-logo-img-div__img {
+    width: 60px;
+  }
+
+  .a-logo-img-div__name {
+    display: none;
+
+    @include from($medium) {
+      display: block;
+      font-size: 26px;
+    }
+  }
+}
+
+.a-logo-img-div--regular {
+  .a-logo-img-div__img {
+    width: 40px;
+  }
+
+  .a-logo-img-div__name {
+    font-size: 22px;
+  }
+
+  @include from($medium) {
+    .a-logo-img-div__img {
+      width: 40px;
+    }
+
+    .a-logo-img-div__name {
+      font-size: 24px;
+    }
+  }
+}
