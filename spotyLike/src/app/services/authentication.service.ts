@@ -56,6 +56,24 @@ export class AuthenticationService {
     return (await axios.post(url, params, config)).data;
   }
 
+  async refreshToken(refresh_token: string) {
+    const url = 'https://accounts.spotify.com/api/token';
+
+    const params = new URLSearchParams();
+    params.append('grant_type', 'refresh_token');
+    params.append('refresh_token', refresh_token);
+    params.append('client_id', CLIENT_ID);
+    params.append('client_secret', CLIENT_SECRET);
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    };
+
+    return (await axios.post(url, params, config)).data;
+  }
+
   isLoggedIn(): boolean {
     let user = sessionStorage.getItem('user_access');
     let isLoggedUser: boolean;
