@@ -19,7 +19,8 @@ export class NavItemsComponent implements OnInit {
   }
 
   handleLogout() {
-    localStorage.removeItem('user-access');
+    sessionStorage.removeItem('user_access');
+    sessionStorage.removeItem('user_data');
     window.location.href = '/login';
   }
 }
