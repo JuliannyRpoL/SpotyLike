@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
-import {
-  CLIENT_ID,
-  REDIRECT_URI,
-  CLIENT_SECRET,
-} from '../../config/credentials';
+import { CLIENT_ID, REDIRECT_URI, CLIENT_SECRET } from '../config/credentials';
 import axios from 'axios';
-import firebase from '../../config/firebase';
+import firebase from '../config/firebase';
 
 @Injectable({
   providedIn: 'root',

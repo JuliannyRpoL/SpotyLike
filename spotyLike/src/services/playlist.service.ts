@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import axiosInterceptor from '../../config/interceptor';
+import axiosInterceptor from './interceptor.service';
 
 @Injectable({
   providedIn: 'root',

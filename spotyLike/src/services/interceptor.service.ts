@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AuthenticationService } from 'src/app/services/authentication.service';
+import { AuthenticationService } from 'src/services/authentication.service';
 
 const axiosInterceptor = axios.create({
   baseURL: 'https://api.spotify.com/v1',

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'm-logo',
+  selector: 'a-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss'],
 })

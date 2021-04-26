@@ -11,7 +11,7 @@ import { CommonButtonComponent } from './components/atoms/common-button/common-b
 import { IconButtonComponent } from './components/atoms/icon-button/icon-button.component';
 import { CommonInputComponent } from './components/atoms/common-input/common-input.component';
 import { FormsModule } from '@angular/forms';
-import { LogoComponent } from './components/molecules/logo/logo.component';
+import { LogoComponent } from './components/atoms/logo/logo.component';
 import { LogInFormComponent } from './components/molecules/log-in-form/log-in-form.component';
 import { OtherFormAccessComponent } from './components/molecules/other-form-access/other-form-access.component';
 import { NavigationBarComponent } from './components/organisms/navigation-bar/navigation-bar.component';
@@ -24,7 +24,7 @@ import { SignInFormComponent } from './components/molecules/sign-in-form/sign-in
 import { LogInButtonComponent } from './components/molecules/log-in-button/log-in-button.component';
 import { SignInOrganismComponent } from './components/organisms/sign-in-org/sign-in-org.component';
 import { ProfileComponent } from './components/molecules/profile/profile.component';
-import { AppContentComponent } from './templates/app-content/app-content.component';
+import { AppContentComponent } from './components/templates/app-content/app-content.component';
 import { NavItemsComponent } from './components/molecules/nav-items/nav-items.component';
 import { SongsGroupComponent } from './components/molecules/songs-group/songs-group.component';
 import { SongComponent } from './components/atoms/song/song.component';

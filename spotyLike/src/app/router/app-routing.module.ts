@@ -5,7 +5,7 @@ import { HomeComponent } from '../pages/home/home.component';
 import { LogInComponent } from '../pages/log-in/log-in.component';
 import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
 import { SignInComponent } from '../pages/sign-in/sign-in.component';
-import { AuthGuard } from '../services/authGuard.service';
+import { AuthGuard } from '../../services/authGuard.service';
 import { HOME, FAVORITES, LOGIN, SIGNIN } from './routes';
 
 const routes: Routes = [
